@@ -1,8 +1,11 @@
+# program's title"
+print ("==========Attendance Tracking System===========")
+
 # Getting the total classes available
 
 while True:
     try:
-        TOTAL_CLASSES = int(input('Enter total number of classes: '))
+        TOTAL_CLASSES = int(input("Enter total number of classes: "))
 
         if TOTAL_CLASSES <= 0:
             print("Total classes must be greater than 0")
@@ -11,8 +14,6 @@ while True:
 
     except:
         print("only numbers are allowed")
-
-
 
 
 # Function to calculate attendance percentage
@@ -35,9 +36,6 @@ running = True
 
 # Main program starts here
 while running:
-
-    # Program title
-    print("The Attendance Tracking System")
 
     # Input student name
     name = input("Enter student name: ").strip()
@@ -77,7 +75,7 @@ while running:
     print("Status:", status)
 
     # Menu options
-    print("\n1. Do you want to record another attendance record?")
+    print("\n1. Do you want to record another attendance?")
     print("2. Exit")
 
     choice = input("Select option: ")
