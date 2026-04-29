@@ -1,8 +1,7 @@
-# program's title"
-print ("==========Attendance Tracking System===========")
+# program's title
+print("==========Attendance Tracking System===========")
 
 # Getting the total classes available
-
 while True:
     try:
         TOTAL_CLASSES = int(input("Enter total number of classes: "))
@@ -13,7 +12,7 @@ while True:
         break
 
     except ValueError:
-        print("only numbers are allowed")
+        print("Only numbers are allowed")
 
 
 # Function to calculate attendance percentage
@@ -38,7 +37,7 @@ running = True
 while running:
 
     # Input student name
-    name = input("Enter student name: ").strip()
+    name = str(input("Enter student name: ").strip())
 
     # Check if name is empty
     if name == "":
@@ -50,13 +49,13 @@ while running:
         print("The names written must contain letters only")
         continue
 
-    try:
-        # Input number of attended classes
-        attended = int(input("Enter number of classes attended: "))
-
-    except ValueError:
-        print("Only numbers are allowed")
-        continue
+    # Input number of attended classes
+    while True:
+        try:
+            attended = int(input("Enter number of classes attended: "))
+            break
+        except ValueError:
+            print("Only numbers are allowed")
 
     # Check valid class range
     if attended < 0 or attended > TOTAL_CLASSES:
@@ -83,6 +82,5 @@ while running:
     if choice == "1":
         continue
     else:
-        print ("attendance record ended")
+        print("Attendance record ended")
         running = False
-
