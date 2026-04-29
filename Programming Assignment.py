@@ -12,7 +12,7 @@ while True:
             continue
         break
 
-    except:
+    except ValueError:
         print("only numbers are allowed")
 
 
@@ -54,7 +54,7 @@ while running:
         # Input number of attended classes
         attended = int(input("Enter number of classes attended: "))
 
-    except:
+    except ValueError:
         print("Only numbers are allowed")
         continue
 
